@@ -1,22 +1,21 @@
+import { ReactNode } from "react";
+import clsx from "clsx";
+
 type ContainerProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 };
 
 export function Container({
   children,
-  className = "",
+  className,
 }: ContainerProps) {
   return (
     <div
-      className={`
-        mx-auto
-        w-full
-        max-w-7xl
-        px-6
-        lg:px-10
-        ${className}
-      `}
+      className={clsx(
+        "mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10 xl:px-12",
+        className
+      )}
     >
       {children}
     </div>

@@ -1,27 +1,14 @@
-import { Button } from "@/components/ui/Button";
-import { Heading } from "@/components/ui/Heading";
-import { Paragraph } from "@/components/ui/Paragraph";
-import { Section } from "@/components/ui/Section";
+import { Navbar } from "@/components/layout/Navbar";
+import { Hero } from "@/sections/Hero/Hero";
 
 export default function Home() {
   return (
-    <main>
-      <Section className="min-h-screen flex flex-col items-center justify-center text-center">
-        <Heading>
-          Raul & Guilherme
-        </Heading>
+    <>
+      <Navbar />
 
-        <Paragraph className="mt-6 max-w-xl">
-          06 de janeiro de 2027
-          <br />
-          Estamos construindo uma experiência inesquecível
-          para compartilhar esse momento tão especial com você.
-        </Paragraph>
-
-        <Button className="mt-10">
-          Em breve
-        </Button>
-      </Section>
-    </main>
+      <main>
+        <Hero />
+      </main>
+    </>
   );
 }
