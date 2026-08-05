@@ -1,46 +1,48 @@
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+
+import { HeroBackground } from "./HeroBackground";
+import { HeroContent } from "./HeroContent";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 -z-20 bg-[#f8f6f2]" />
+    <section className="relative min-h-screen overflow-hidden">
 
-      {/* Gradiente */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white/30 via-transparent to-[#f8f6f2]" />
+      <HeroBackground />
 
       <Container>
-        <div className="flex flex-col items-center text-center">
 
-          <span className="mb-4 tracking-[0.4em] uppercase text-sm text-[#7C8465]">
-            Nosso Sim
-          </span>
+        <div
+          className="
+            grid
+            min-h-screen
+            items-center
+            gap-20
+            lg:grid-cols-2
+          "
+        >
+          <HeroContent />
 
-          <h1 className="text-6xl md:text-8xl font-light leading-none">
-            Raul
-            <br />
-            <span className="text-[#6D1F32]">&</span>
-            <br />
-            Guilherme
-          </h1>
+          <div className="relative flex justify-center">
 
-          <p className="mt-8 max-w-xl text-lg leading-8 text-gray-600">
-            Cada história de amor é única.
-            <br />
-            A nossa continuará para sempre.
-          </p>
+            <div
+              className="
+                h-[620px]
+                w-[450px]
+                overflow-hidden
+                rounded-[220px]
+                bg-white
+                shadow-2xl
+              "
+            >
+              FOTO
+            </div>
 
-          <p className="mt-10 text-[#6D1F32] uppercase tracking-[0.3em]">
-            06 de Janeiro de 2027
-          </p>
-
-          <Button className="mt-12">
-            Confirmar presença
-          </Button>
+          </div>
 
         </div>
+
       </Container>
+
     </section>
   );
 }
