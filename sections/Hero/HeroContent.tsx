@@ -29,13 +29,13 @@ export function HeroContent() {
         variants={fadeUp}
         className="text-7xl md:text-9xl leading-none"
       >
-        Raul
+        Guilherme
 
         <span className="block my-2 text-[#6D1F32]">
           &
         </span>
 
-        Guilherme
+        Raul
       </motion.h1>
 
       <motion.p

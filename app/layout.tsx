@@ -20,7 +20,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Raul & Guilherme",
+  title: "Guilherme & Raul",
   description: "Nosso Sim • 06 de janeiro de 2027",
 };
 

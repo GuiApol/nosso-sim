@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 
 import { NavItem } from "./NavItem";
+import Image from "next/image";
 
 export function Navbar() {
   return (
@@ -40,10 +41,14 @@ export function Navbar() {
           "
         >
 
-          <h2 className="text-xl font-semibold">
-            Guilherme + Raul
-          </h2>
-
+         <Image
+  src="/images/logo/logo.png"
+  alt="Logo Guilherme + Raul"
+  width={190}
+  height={85}
+  priority
+  className="h-auto w-[190px]"
+/>
           <div className="hidden items-center gap-10 lg:flex">
 
             <NavItem href="#historia">
