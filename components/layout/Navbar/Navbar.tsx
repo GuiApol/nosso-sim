@@ -12,6 +12,7 @@ const links = [
   { label: "Início", href: "#inicio" },
   { label: "História", href: "#historia" },
   { label: "O grande dia", href: "#local" },
+  { label: "Galeria", href: "#galeria" },
   { label: "Presentes", href: "#presentes" },
   { label: "Dúvidas", href: "#duvidas" },
 ];

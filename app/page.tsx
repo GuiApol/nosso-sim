@@ -3,6 +3,7 @@ import { Countdown } from "@/sections/Countdown";
 import { Event } from "@/sections/Event";
 import { FAQ } from "@/sections/FAQ";
 import { Footer } from "@/sections/Footer";
+import { Gallery } from "@/sections/Gallery";
 import { Gifts } from "@/sections/Gifts";
 import { Hero } from "@/sections/Hero";
 import { RSVP } from "@/sections/RSVP";
@@ -16,6 +17,7 @@ export default function Home() {
       <Story />
       <Countdown />
       <Event />
+      <Gallery />
       <Gifts />
       <RSVP />
       <FAQ />
