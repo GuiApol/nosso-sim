@@ -1,12 +1,15 @@
 "use client";
 
+import { Reveal } from "@/components/animations";
 import { CountdownTimer } from "./CountdownTimer";
+
 
 export function Countdown() {
   return (
     <section
       className="bg-[#1b1a18] px-6 py-24 text-white sm:px-8 lg:px-12 lg:py-32"
     >
+      <Reveal>
       <div className="mx-auto max-w-5xl text-center">
         <p className="mb-5 uppercase tracking-[0.45em] text-[#d2c7b3] text-sm">
           Contagem Regressiva
@@ -35,6 +38,7 @@ export function Countdown() {
           Fortaleza • Ceará
         </p>
       </div>
+      </Reveal>
     </section>
   );
 }

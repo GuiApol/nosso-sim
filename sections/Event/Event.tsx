@@ -1,4 +1,5 @@
 import { CalendarDays, Clock3, MapPin } from "lucide-react";
+import { Reveal } from "@/components/animations";
 
 export function Event() {
   return (
@@ -6,6 +7,7 @@ export function Event() {
       id="local"
       className="bg-[#f8f6f2] px-6 py-24 sm:px-8 lg:px-12 lg:py-32"
     >
+      <Reveal>
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.42em] text-[#7c8465] sm:text-sm">
@@ -98,6 +100,7 @@ export function Event() {
           </div>
         </div>
       </div>
+      </Reveal>
     </section>
   );
 }

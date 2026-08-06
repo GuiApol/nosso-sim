@@ -1,7 +1,11 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Countdown } from "@/sections/Countdown";
 import { Event } from "@/sections/Event";
+import { FAQ } from "@/sections/FAQ";
+import { Footer } from "@/sections/Footer";
+import { Gifts } from "@/sections/Gifts";
 import { Hero } from "@/sections/Hero";
+import { RSVP } from "@/sections/RSVP";
 import { Story } from "@/sections/Story";
 
 export default function Home() {
@@ -12,6 +16,10 @@ export default function Home() {
       <Story />
       <Countdown />
       <Event />
+      <Gifts />
+      <RSVP />
+      <FAQ />
+      <Footer />
     </main>
   );
 }
