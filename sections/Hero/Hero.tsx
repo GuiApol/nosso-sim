@@ -14,18 +14,17 @@ export function Hero() {
         fill
         priority
         sizes="100vw"
-        className="z-0 object-cover object-center"
+        className="z-0 scale-105 object-cover object-center animate-hero-image"
       />
 
       {/* Camada geral para escurecer a fotografia */}
       <div className="absolute inset-0 z-10 bg-black/25" />
 
       {/* Gradiente mais escuro no lado esquerdo */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/35 to-transparent" />
 
       {/* Gradiente inferior */}
       <div className="absolute inset-x-0 bottom-0 z-10 h-52 bg-gradient-to-t from-black/55 to-transparent" />
-
 
       {/* Conteúdo principal */}
       <div className="relative z-20 mx-auto w-full max-w-7xl px-6 pb-20 pt-36 sm:px-8 sm:pt-40 lg:px-12">
@@ -52,21 +51,22 @@ export function Hero() {
 
           {/* Frase */}
           <p className="mt-8 max-w-xl text-xl italic leading-relaxed text-white/90 sm:text-2xl">
-            Celebrando o começo de um novo capítulo.
+            Dois caminhos que se encontraram. Um futuro que escolhemos
+            construir juntos.
           </p>
 
           {/* Botões */}
           <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
             <a
               href="#confirmacao"
-              className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#6d1f32] px-10 py-4 text-sm font-semibold text-white shadow-lg shadow-black/15 transition duration-300 hover:-translate-y-1 hover:bg-[#581827] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#6d1f32] px-10 py-4 text-sm font-semibold text-white shadow-lg shadow-black/15 transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-[#581827] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               Confirmar presença
             </a>
 
             <a
               href="#historia"
-              className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/70 bg-white/10 px-10 py-4 text-sm font-semibold text-white backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#1f1f1f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/70 bg-white/10 px-10 py-4 text-sm font-semibold text-white backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-white hover:text-[#1f1f1f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               Nossa história
             </a>
@@ -86,7 +86,7 @@ export function Hero() {
 
         <ChevronDown
           aria-hidden="true"
-          className="h-8 w-8 animate-bounce"
+          className="h-8 w-8 animate-scroll-indicator"
         />
       </a>
     </section>

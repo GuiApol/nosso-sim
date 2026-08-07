@@ -4,39 +4,52 @@
   --background: #f8f6f2;
   --foreground: #1f1f1f;
 }
-@keyframes leaf-float-left {
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@keyframes heroImage {
+  0% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1.12);
+  }
+}
+
+.animate-hero-image {
+  animation: heroImage 18s ease-in-out infinite alternate;
+}
+
+@keyframes scrollIndicator {
   0%,
   100% {
-    transform: translate3d(0, 0, 0) rotate(-7deg);
+    transform: translateY(0);
+    opacity: 0.5;
   }
 
   50% {
-    transform: translate3d(10px, -14px, 0) rotate(-3deg);
+    transform: translateY(8px);
+    opacity: 1;
   }
 }
 
-@keyframes leaf-float-right {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(8deg);
-  }
-
-  50% {
-    transform: translate3d(-9px, 12px, 0) rotate(4deg);
-  }
-}
-
-.animate-leaf-left {
-  animation: leaf-float-left 18s ease-in-out infinite;
-}
-
-.animate-leaf-right {
-  animation: leaf-float-right 22s ease-in-out infinite;
+.animate-scroll-indicator {
+  animation: scrollIndicator 2.8s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-leaf-left,
-  .animate-leaf-right {
+  .animate-hero-image,
+  .animate-scroll-indicator {
     animation: none;
   }
 }
