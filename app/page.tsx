@@ -8,10 +8,13 @@ import { Gifts } from "@/sections/Gifts";
 import { Hero } from "@/sections/Hero";
 import { RSVP } from "@/sections/RSVP";
 import { Story } from "@/sections/Story";
+import { WeddingIntro } from "@/components/Intro";
 
 export default function Home() {
   return (
     <main>
+      <WeddingIntro />
+
       <Navbar />
       <Hero />
       <Story />
