@@ -1,17 +1,36 @@
-@import "tailwindcss";
+@keyframes leaf-float-left {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-7deg);
+  }
 
-:root {
-  --background: #f8f6f2;
-  --foreground: #1f1f1f;
+  50% {
+    transform: translate3d(10px, -14px, 0) rotate(-3deg);
+  }
 }
 
-html {
-  scroll-behavior: smooth;
+@keyframes leaf-float-right {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(8deg);
+  }
+
+  50% {
+    transform: translate3d(-9px, 12px, 0) rotate(4deg);
+  }
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: var(--background);
-  color: var(--foreground);
+.animate-leaf-left {
+  animation: leaf-float-left 18s ease-in-out infinite;
+}
+
+.animate-leaf-right {
+  animation: leaf-float-right 22s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-leaf-left,
+  .animate-leaf-right {
+    animation: none;
+  }
 }

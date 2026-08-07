@@ -3,20 +3,22 @@ import Image from "next/image";
 type LeafDecorationProps = {
   variant?: "left" | "right";
   className?: string;
+  opacity?: number;
 };
 
 export function LeafDecoration({
   variant = "left",
   className = "",
+  opacity = 0.1,
 }: LeafDecorationProps) {
   const isLeft = variant === "left";
 
   return (
     <div
       aria-hidden="true"
-      className={`pointer-events-none absolute z-10 select-none ${
+      className={`pointer-events-none absolute select-none ${
         isLeft
-          ? "-left-16 top-[12%] sm:-left-10"
+          ? "-left-16 top-[10%] sm:-left-10"
           : "-right-16 bottom-[8%] sm:-right-10"
       } ${className}`}
     >
@@ -29,7 +31,8 @@ export function LeafDecoration({
         alt=""
         width={360}
         height={520}
-        className={`h-auto w-[190px] opacity-[0.12] sm:w-[250px] lg:w-[320px] ${
+        style={{ opacity }}
+        className={`h-auto w-[180px] sm:w-[240px] lg:w-[310px] ${
           isLeft ? "animate-leaf-left" : "animate-leaf-right"
         }`}
       />

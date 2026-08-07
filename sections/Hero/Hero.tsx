@@ -26,6 +26,7 @@ export function Hero() {
       {/* Gradiente inferior */}
       <div className="absolute inset-x-0 bottom-0 z-10 h-52 bg-gradient-to-t from-black/55 to-transparent" />
 
+
       {/* Conteúdo principal */}
       <div className="relative z-20 mx-auto w-full max-w-7xl px-6 pb-20 pt-36 sm:px-8 sm:pt-40 lg:px-12">
         <div className="max-w-2xl text-center text-white lg:text-left">

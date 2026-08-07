@@ -4,9 +4,9 @@ import { Reveal } from "@/components/animations";
 export function Story() {
   return (
     <section
-      id="historia"
-      className="bg-[#f8f6f2] px-6 py-24 sm:px-8 lg:px-12 lg:py-32"
-    >
+  id="historia"
+  className="relative overflow-hidden bg-[#f8f6f2] px-6 py-24 sm:px-8 lg:px-12 lg:py-32"
+>
       <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-20">
   <Reveal direction="right">
     <div>
@@ -36,6 +36,7 @@ export function Story() {
       </p>
     </div>
   </Reveal>
+  
 
   <Reveal direction="left" delay={0.15}>
     <div className="relative">
