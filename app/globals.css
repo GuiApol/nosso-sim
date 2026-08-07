@@ -3,6 +3,14 @@
 :root {
   --background: #f8f6f2;
   --foreground: #1f1f1f;
+
+  --wine: #6d1f32;
+  --wine-dark: #581827;
+
+  --olive: #7c8465;
+  --olive-dark: #5f684c;
+  --olive-light: #b8c5a0;
+  --olive-soft: #e7eadf;
 }
 
 html {

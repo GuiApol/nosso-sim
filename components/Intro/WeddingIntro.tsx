@@ -186,8 +186,7 @@ export function WeddingIntro() {
               duration: 5.2,
               ease: "linear",
             }}
-            className="absolute bottom-0 left-0 h-[2px] w-full origin-left bg-white/40"
-          />
+className="absolute -bottom-40 -right-24 h-[28rem] w-[28rem] rounded-full bg-[var(--olive)]/30 blur-[140px]"          />
         </motion.div>
       )}
     </AnimatePresence>
