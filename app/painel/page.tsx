@@ -15,6 +15,8 @@ import {
   getDashboardResponses,
 } from "@/lib/dashboard-data";
 
+import { DashboardTable } from "./DashboardTable";
+
 export const dynamic = "force-dynamic";
 
 export default async function DashboardPage() {
@@ -114,88 +116,12 @@ export default async function DashboardPage() {
             value={declinedResponses.length}
           />
         </section>
+       <DashboardTable responses={responses} />
+       <section className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+  {/* cards de estatísticas */}
+</section>
 
-        <section className="mt-10 overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-xl shadow-black/5">
-          <div className="border-b border-black/10 px-6 py-6 sm:px-8">
-            <h2 className="font-[var(--font-heading)] text-3xl text-[#1f1f1f]">
-              Confirmações recebidas
-            </h2>
-          </div>
-
-          {responses.length === 0 ? (
-            <div className="px-6 py-16 text-center text-[#777]">
-              Nenhuma resposta foi recebida ainda.
-            </div>
-          ) : (
-            <div className="overflow-x-auto">
-              <table className="min-w-[850px] w-full text-left">
-                <thead className="bg-[#efe9df] text-xs uppercase tracking-[0.18em] text-[#686868]">
-                  <tr>
-                    <th className="px-6 py-4">
-                      Nome
-                    </th>
-                    <th className="px-6 py-4">
-                      Presença
-                    </th>
-                    <th className="px-6 py-4">
-                      Acompanhantes
-                    </th>
-                    <th className="px-6 py-4">
-                      Mensagem
-                    </th>
-                    <th className="px-6 py-4">
-                      Data
-                    </th>
-                  </tr>
-                </thead>
-
-                <tbody className="divide-y divide-black/10">
-                  {responses.map((item) => {
-                    const confirmed =
-                      item.attendance
-                        .trim()
-                        .toLowerCase() === "sim";
-
-                    return (
-                      <tr
-                        key={`${item.id}-${item.date}`}
-                        className="align-top transition hover:bg-[#f8f6f2]"
-                      >
-                        <td className="px-6 py-5 font-semibold text-[#262626]">
-                          {item.name}
-                        </td>
-
-                        <td className="px-6 py-5">
-                          <span
-                            className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold ${
-                              confirmed
-                                ? "bg-green-100 text-green-800"
-                                : "bg-red-100 text-red-700"
-                            }`}
-                          >
-                            {item.attendance}
-                          </span>
-                        </td>
-
-                        <td className="px-6 py-5 text-[#555]">
-                          {item.guests}
-                        </td>
-
-                        <td className="max-w-sm px-6 py-5 leading-7 text-[#666]">
-                          {item.message || "—"}
-                        </td>
-
-                        <td className="whitespace-nowrap px-6 py-5 text-sm text-[#777]">
-                          {formatDate(item.date)}
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </section>
+<DashboardTable responses={responses} />
       </div>
     </main>
   );
