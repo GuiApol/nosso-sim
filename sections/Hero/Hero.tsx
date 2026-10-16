@@ -9,7 +9,7 @@ export function Hero() {
     >
       {/* Imagem temporária de fundo */}
       <Image
-        src="/images/hero/foto-casal.jpg"
+        src="/images/hero/foto-casal.jpeg"
         alt="Imagem temporária representando o casal"
         fill
         priority

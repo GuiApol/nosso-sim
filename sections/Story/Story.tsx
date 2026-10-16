@@ -44,7 +44,7 @@ export function Story() {
 
       <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl shadow-black/10">
         <Image
-          src="/images/hero/foto-casal.jpg"
+          src="/images/hero/foto-casal.jpeg"
           alt="Imagem temporária representando a história do casal"
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
