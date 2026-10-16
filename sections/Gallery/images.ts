@@ -7,7 +7,7 @@ export type GalleryImage = {
 
 export const galleryImages: GalleryImage[] = [
   {
-    src: "/images/hero/foto-casal.jpeg",
+    src: "/images/hero/foto-1.jpeg",
     alt: "Momento especial de Guilherme e Raul",
     caption: "Um capítulo especial da nossa história.",
     className: "md:col-span-2 md:row-span-2",
@@ -18,7 +18,7 @@ export const galleryImages: GalleryImage[] = [
     caption: "Entre encontros, conversas e descobertas.",
   },
   {
-    src: "/images/hero/foto-2.jpeg,
+    src: "/images/hero/foto-2.jpeg",
     alt: "Lembrança especial de Guilherme e Raul",
     caption: "Cada momento nos trouxe até aqui.",
   },
