@@ -43,7 +43,6 @@ export function Event() {
             value="Fortaleza, Ceará"
           />
         </div>
-
         <div className="mt-10 overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-xl shadow-black/5">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
             <div className="min-h-[390px] overflow-hidden bg-[#ded8cd] lg:min-h-full">
@@ -94,7 +93,6 @@ Como chegar
             </div>
           </div>
         </div>
-      </div>
       </Reveal>
     </section>
   );
