@@ -13,12 +13,12 @@ export const galleryImages: GalleryImage[] = [
     className: "md:col-span-2 md:row-span-2",
   },
   {
-    src: "/images/hero/foto (1).jpeg",
+    src: "/images/hero/foto-1.jpeg",
     alt: "Registro da história de Guilherme e Raul",
     caption: "Entre encontros, conversas e descobertas.",
   },
   {
-    src: "/images/hero/foto(2).jpeg,
+    src: "/images/hero/foto-2.jpeg,
     alt: "Lembrança especial de Guilherme e Raul",
     caption: "Cada momento nos trouxe até aqui.",
   },
