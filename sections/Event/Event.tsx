@@ -85,7 +85,7 @@ export function Event() {
                 </p>
 
                 <p className="mt-2 leading-7 text-[#666]">
-                  Local e endereço serão informados em breve.
+                  Cartório Messejana - Rua Santa Rosália, 27 - Messejana, Fortaleza - CE, 60871-060
                 </p>
               </div>
 
