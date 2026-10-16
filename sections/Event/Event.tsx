@@ -17,12 +17,11 @@ export function Event() {
           <h2 className="mt-5 font-[var(--font-heading)] text-5xl font-light leading-tight text-[#1f1f1f] sm:text-6xl">
             Um momento especial para celebrar juntos.
           </h2>
-
-          <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-[#616161] sm:text-lg">
-            Em breve, adicionaremos todos os detalhes do local da cerimônia.
-            Por enquanto, esta seção já está preparada para receber o endereço,
-            horário e rota.
-          </p>
+           <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-[#616161] sm:text-lg">
+  Preparamos cada detalhe para compartilhar esse momento
+  tão especial com vocês. Confira o local da cerimônia
+  e consulte o mapa para planejar sua chegada.
+           </p>
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-3">
@@ -47,22 +46,18 @@ export function Event() {
 
         <div className="mt-10 overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-xl shadow-black/5">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="flex min-h-[390px] items-center justify-center bg-[#ded8cd] px-8 text-center">
-              <div>
-                <MapPin
-                  aria-hidden="true"
-                  className="mx-auto h-10 w-10 text-[#6d1f32]"
-                />
+            <div className="min-h-[390px] overflow-hidden bg-[#ded8cd] lg:min-h-full">
+              <iframe
+    title="Local da cerimônia no Cartório Messejana"
+    src="https://maps.google.com/maps?q=Cart%C3%B3rio%20Messejana%2C%20Rua%20Santa%20Ros%C3%A1lia%2C%2027%2C%20Fortaleza%20CE&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    width="100%"
+    height="100%"
+    style={{ border: 0, minHeight: "390px" }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    /></div>
 
-                <p className="mt-5 font-[var(--font-heading)] text-3xl text-[#1f1f1f]">
-                  Mapa em breve
-                </p>
-
-                <p className="mx-auto mt-3 max-w-md leading-7 text-[#666]">
-                  Quando o local estiver definido, colocaremos aqui o mapa
-                  interativo e o botão para abrir a rota.
-                </p>
-              </div>
             </div>
 
             <div className="flex flex-col justify-center p-8 sm:p-12">
@@ -88,14 +83,14 @@ export function Event() {
                   Cartório Messejana - Rua Santa Rosália, 27 - Messejana, Fortaleza - CE, 60871-060
                 </p>
               </div>
-
-              <button
-                type="button"
-                disabled
-                className="mt-9 inline-flex min-h-14 w-fit cursor-not-allowed items-center justify-center rounded-full bg-[#6d1f32]/50 px-9 text-sm font-semibold text-white"
-              >
-                Como chegar
-              </button>
+              <a
+href="https://maps.app.goo.gl/PHrP9hLsJ1UhwPkJ7"
+target="_blank"
+rel="noopener noreferrer"
+className="mt-9 inline-flex min-h-14 w-fit items-center justify-center gap-2 rounded-full bg-[#6d1f32] px-9 text-sm font-semibold text-white transition duration-300 hover:bg-[#541728] hover:-translate-y-0.5">
+  <MapPin aria-hidden="true" className="h-4 w-4" />
+Como chegar
+</a>
             </div>
           </div>
         </div>
