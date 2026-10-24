@@ -88,6 +88,12 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+
+icons: {
+    icon: "/images/logo/logo.png",
+    shortcut: "/images/logo/logo.png",
+    apple: "/images/logo/logo.png",
+  },
 };
 
 export const viewport: Viewport = {

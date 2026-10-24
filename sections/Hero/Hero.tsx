@@ -7,7 +7,7 @@ export function Hero() {
       id="inicio"
       className="relative flex min-h-screen items-center overflow-hidden"
     >
-      {/* Imagem temporária de fundo */}
+      {/* Imagem de fundo */}
       <Image
         src="/images/hero/foto-casal.jpeg"
         alt="Imagem temporária representando o casal"
@@ -45,7 +45,7 @@ export function Hero() {
 
           {/* Data */}
           <p className="mt-7 text-xs font-semibold uppercase tracking-[0.38em] text-white/85 sm:text-sm">
-            06 <span className="mx-2 text-white/50">de</span> Janeiro
+            13 <span className="mx-2 text-white/50">de</span> Janeiro
             <span className="mx-2 text-white/50">de</span> 2027
           </p>
 
