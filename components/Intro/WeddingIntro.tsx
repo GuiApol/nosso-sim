@@ -146,7 +146,7 @@ export function WeddingIntro() {
               }}
               className="mt-8 text-xs font-semibold uppercase tracking-[0.34em] text-white/70 sm:text-sm"
             >
-              06 de janeiro de 2027
+              13 de janeiro de 2027
             </motion.p>
 
             <motion.p

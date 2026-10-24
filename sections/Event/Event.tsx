@@ -28,19 +28,19 @@ export function Event() {
           <EventCard
             icon={<CalendarDays aria-hidden="true" />}
             label="Data"
-            value="06 de janeiro de 2027"
+            value="13 de janeiro de 2027"
           />
 
           <EventCard
             icon={<Clock3 aria-hidden="true" />}
             label="Horário"
-            value="A confirmar"
+            value="15 hs"
           />
 
           <EventCard
             icon={<MapPin aria-hidden="true" />}
             label="Local"
-            value="Fortaleza, Ceará"
+            value="Cartório da Messeja, Fortaleza, Ceará"
           />
         </div>
         <div className="mt-10 overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-xl shadow-black/5">

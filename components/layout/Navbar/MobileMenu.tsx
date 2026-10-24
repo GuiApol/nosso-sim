@@ -78,7 +78,7 @@ export function MobileMenu({
 
             <div className="pb-10 text-center">
               <p className="text-xs uppercase tracking-[0.3em] text-white/45">
-                06 de janeiro de 2027
+                13 de janeiro de 2027
               </p>
             </div>
           </div>

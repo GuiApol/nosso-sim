@@ -5,12 +5,11 @@ const questions = [
   {
     question: "Qual será o horário da cerimônia?",
     answer:
-      "O horário será confirmado em breve. Assim que estiver definido, atualizaremos esta página.",
-  },
+"A cerimônia será realizada às 15h, no Cartório da Messejana, em Fortaleza, Ceará, no dia 13 de janeiro de 2027.",  },
   {
     question: "Onde será realizada a cerimônia?",
     answer:
-      "A cerimônia será realizada em Fortaleza, Ceará. O endereço completo e o mapa serão divulgados mais próximo da data.",
+      "A cerimônia será realizada no Cartório da Messejana em Fortaleza, Ceará.",
   },
   {
     question: "Existe algum traje recomendado?",
@@ -25,7 +24,7 @@ const questions = [
   {
     question: "Até quando posso confirmar presença?",
     answer:
-      "A data limite ainda será definida. Recomendamos confirmar assim que possível para nos ajudar com a organização.",
+      "A data limite será definida até o dia 13 de dezembro de 2026. Recomendamos confirmar assim que possível para nos ajudar com a organização.",
   },
   {
     question: "É obrigatório contribuir pelo PIX?",

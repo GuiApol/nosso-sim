@@ -36,14 +36,14 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Celebre conosco o casamento de Guilherme e Raul, no dia 06 de janeiro de 2027, em Fortaleza, Ceará.",
+    "Celebre conosco o casamento de Guilherme e Raul, no dia 13 de janeiro de 2027, em Fortaleza, Ceará.",
 
   keywords: [
     "Guilherme e Raul",
     "casamento",
     "nosso sim",
     "casamento em Fortaleza",
-    "06 de janeiro de 2027",
+    "13 de janeiro de 2027",
   ],
 
   authors: [
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     siteName: "Nosso Sim — Guilherme + Raul",
     title: "Guilherme + Raul | Nosso Sim",
     description:
-      "06 de janeiro de 2027. Celebrando o começo de um novo capítulo.",
+      "13 de janeiro de 2027. Celebrando o começo de um novo capítulo.",
     images: [
       {
         url: "/images/og/casamento.jpg",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Guilherme + Raul | Nosso Sim",
     description:
-      "06 de janeiro de 2027. Celebrando o começo de um novo capítulo.",
+      "13 de janeiro de 2027. Celebrando o começo de um novo capítulo.",
     images: ["/images/og/casamento.jpg"],
   },
 

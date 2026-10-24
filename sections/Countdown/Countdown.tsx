@@ -31,7 +31,7 @@ export function Countdown() {
         <div className="mt-16 h-px bg-white/10" />
 
         <p className="mt-12 uppercase tracking-[0.35em] text-white/70">
-          06 de Janeiro de 2027
+          13 de Janeiro de 2027
         </p>
 
         <p className="mt-3 text-white/50">

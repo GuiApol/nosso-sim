@@ -15,7 +15,7 @@ export function Footer() {
           />
 
           <p className="mt-7 text-xs font-semibold uppercase tracking-[0.38em] text-white/65 sm:text-sm">
-            06 de janeiro de 2027
+            13 de janeiro de 2027
           </p>
 
           <div className="mt-9 flex items-center gap-4 text-white/35">
