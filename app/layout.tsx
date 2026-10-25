@@ -59,30 +59,31 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    type: "website",
-    locale: "pt_BR",
-    url: "/",
-    siteName: "Nosso Sim — Guilherme + Raul",
-    title: "Guilherme + Raul | Nosso Sim",
-    description:
-      "13 de janeiro de 2027. Celebrando o começo de um novo capítulo.",
-    images: [
-      {
-        url: "/images/og/casamento.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Guilherme e Raul — Nosso Sim",
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Guilherme + Raul | Nosso Sim",
-    description:
-      "13 de janeiro de 2027. Celebrando o começo de um novo capítulo.",
-    images: ["/images/og/casamento.jpg"],
-  },
+  type: "website",
+  locale: "pt_BR",
+  url: "https://nosso-sim-phi.vercel.app/",
+  siteName: "Guilherme & Raul",
+  title: "Guilherme & Raul | Nosso Sim",
+  description:
+    "Celebre conosco o casamento de Guilherme e Raul, no dia 13 de janeiro de 2027, em Fortaleza, Ceará.",
+  images: [
+    {
+      url: "https://nosso-sim-phi.vercel.app/images/og/og-casamento-guilherme-raul.png",
+      width: 1200,
+      height: 630,
+      alt: "Convite de casamento de Guilherme e Raul, 13 de janeiro de 2027",
+    },
+  ],
+},
+twitter: {
+  card: "summary_large_image",
+  title: "Guilherme & Raul | Nosso Sim",
+  description:
+    "Nosso casamento será em 13 de janeiro de 2027, em Fortaleza, Ceará.",
+  images: [
+    "https://nosso-sim-phi.vercel.app/images/og/og-casamento-guilherme-raul.png",
+  ],
+},
 
   robots: {
     index: true,
