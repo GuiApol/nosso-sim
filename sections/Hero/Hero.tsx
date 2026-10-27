@@ -9,8 +9,8 @@ export function Hero() {
     >
       {/* Imagem de fundo */}
       <Image
-        src="/images/hero/foto-casal.jpeg"
-        alt="Imagem temporária representando o casal"
+        src="/images/otimizadas/DSC01918.webp"
+        alt="Imagem caminhando de mãos dadas contra a luz"
         fill
         priority
         sizes="100vw"

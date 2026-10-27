@@ -25,10 +25,7 @@ export function Reveal({
 
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        ...positions[direction],
-      }}
+      initial={false}
       whileInView={{
         opacity: 1,
         x: 0,

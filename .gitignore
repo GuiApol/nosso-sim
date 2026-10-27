@@ -14,3 +14,5 @@ out/
 
 # sistema
 .DS_Store
+# Fotos originais preservadas localmente
+/public/images/fotos-originais/
