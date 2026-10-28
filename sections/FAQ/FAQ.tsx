@@ -24,8 +24,7 @@ const questions = [
   {
     question: "Até quando posso confirmar presença?",
     answer:
-      "A data limite será definida até o dia 13 de dezembro de 2026. Recomendamos confirmar assim que possível para nos ajudar com a organização.",
-  },
+"A confirmação de presença deve ser feita até 13 de dezembro de 2026. Recomendamos confirmar assim que possível para nos ajudar com a organização.",  },
   {
     question: "É obrigatório contribuir pelo PIX?",
     answer:
