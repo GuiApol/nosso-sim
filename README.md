@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <em>06 de Janeiro de 2027</em>
+  <em>13 de Janeiro de 2027</em>
 </p>
 
 ---
@@ -155,7 +155,7 @@ Mais do que informar, queremos emocionar cada visitante e fazer com que ele se s
 
 ## 📅 O Grande Dia
 
-**Data:** 06 de janeiro de 2027
+**Data:** 13 de janeiro de 2027
 
 Em breve, compartilharemos todos os detalhes da cerimônia e celebração.
 

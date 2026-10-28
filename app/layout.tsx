@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     "Celebre conosco o casamento de Guilherme e Raul, no dia 13 de janeiro de 2027, em Fortaleza, Ceará.",
   images: [
     {
-      url: "https://nosso-sim-phi.vercel.app/images/og/og-casamento-guilherme-raul.png",
+      url: "https://nosso-sim-phi.vercel.app/images/og/nosso-sim-og.png",
       width: 1200,
       height: 630,
       alt: "Convite de casamento de Guilherme e Raul, 13 de janeiro de 2027",
@@ -81,7 +81,7 @@ twitter: {
   description:
     "Nosso casamento será em 13 de janeiro de 2027, em Fortaleza, Ceará.",
   images: [
-    "https://nosso-sim-phi.vercel.app/images/og/og-casamento-guilherme-raul.png",
+    "https://nosso-sim-phi.vercel.app/images/og/nosso-sim-og.png",
   ],
 },
 
