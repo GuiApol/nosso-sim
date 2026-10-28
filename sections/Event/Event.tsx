@@ -30,13 +30,7 @@ export function Event() {
             <EventCard
               icon={<CalendarDays aria-hidden="true" />}
               label="Data"
-              value="13 de janeiro de 2027"
-            />
-
-            <EventCard
-              icon={<Clock3 aria-hidden="true" />}
-              label="Horário"
-              value="15h"
+              value="Quarta-feira, 13 de janeiro de 2027 · 15h"
             />
 
             <EventCard

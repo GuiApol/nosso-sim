@@ -63,8 +63,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: siteUrl,
-    siteName: "Guilherme & Raul",
-    title: "Guilherme & Raul | Nosso Sim",
+    siteName: "Guilherme + Raul",
+    title: "Guilherme + Raul | Nosso Sim",
     description:
       "Celebre conosco o casamento de Guilherme e Raul, no dia 13 de janeiro de 2027, em Fortaleza, Ceará.",
     images: [
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Guilherme & Raul | Nosso Sim",
+    title: "Guilherme + Raul | Nosso Sim",
     description:
       "Nosso casamento será em 13 de janeiro de 2027, em Fortaleza, Ceará.",
     images: [ogImage],

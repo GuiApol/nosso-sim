@@ -39,7 +39,6 @@ export function Hero() {
             alt="Logo Guilherme e Raul"
             width={560}
             height={260}
-            priority
             className="mx-auto h-auto w-[250px] brightness-0 invert sm:w-[340px] lg:mx-0 lg:w-[450px]"
           />
 

@@ -1,36 +1,40 @@
 import { FAQItem } from "./FAQItem";
 import { Reveal } from "@/components/animations";
 
+
 const questions = [
-  {
-    question: "Qual será o horário da cerimônia?",
-    answer:
-"A cerimônia será realizada às 15h, no Cartório da Messejana, em Fortaleza, Ceará, no dia 13 de janeiro de 2027.",  },
-  {
-    question: "Onde será realizada a cerimônia?",
-    answer:
-      "A cerimônia será realizada no Cartório da Messejana em Fortaleza, Ceará.",
-  },
   {
     question: "Existe algum traje recomendado?",
     answer:
-      "Queremos que todos se sintam confortáveis. Em breve, adicionaremos aqui uma sugestão de traje para combinar com o estilo da cerimônia.",
+      "Fiquem à vontade! Pedimos apenas algo leve e confortável, porque o dia em Fortaleza costuma ser bem quente.",
+  },
+  {
+    question: "Haverá recepção ou festa depois?",
+    answer:
+      "Não. Nossa cerimônia será íntima, só com pessoas muito especiais, e não haverá recepção após o momento no cartório.",
+  },
+  {
+    question: "Posso tirar fotos?",
+    answer:
+      "Teremos fotógrafo registrando tudo, então fiquem à vontade para fazer seus registros também. Só pedimos que não atrapalhem o trabalho dele.",
   },
   {
     question: "Posso levar acompanhante?",
     answer:
-      "A quantidade de acompanhantes deverá seguir o convite recebido. Na confirmação de presença, você poderá informar os acompanhantes autorizados.",
+      "Na confirmação de presença, informe o nome de quem vai com você.",
   },
   {
     question: "Até quando posso confirmar presença?",
     answer:
-"A confirmação de presença deve ser feita até 13 de dezembro de 2026. Recomendamos confirmar assim que possível para nos ajudar com a organização.",  },
+      "A confirmação de presença deve ser feita até 13 de dezembro de 2026. Recomendamos confirmar assim que possível para nos ajudar com a organização.",
+  },
   {
     question: "É obrigatório contribuir pelo PIX?",
     answer:
       "Não. Sua presença já é muito importante para nós. A contribuição é completamente opcional.",
   },
 ];
+
 
 export function FAQ() {
   return (

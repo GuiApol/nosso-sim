@@ -129,12 +129,11 @@ export function GalleryLightbox({
             className="relative h-[72vh] w-full max-w-6xl"
           >
             <Image
-              src={images[selectedIndex].src}
-              alt={images[selectedIndex].alt}
-              fill
-              priority
-              sizes="100vw"
-              className="object-contain"
+  src={images[selectedIndex].src}
+  alt={images[selectedIndex].alt}
+  fill
+  sizes="(max-width: 768px) 100vw, 90vw"
+  className="object-contain"
             />
           </motion.div>
 

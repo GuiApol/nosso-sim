@@ -39,7 +39,7 @@ export function GalleryGrid() {
               key={currentImage.src}
               src={currentImage.src}
               alt={currentImage.alt}
-              loading="eager"
+              loading="lazy"
               className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.02]"
             />
 
