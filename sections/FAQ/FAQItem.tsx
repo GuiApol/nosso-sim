@@ -1,6 +1,8 @@
+
 "use client";
 
 import { ChevronDown } from "lucide-react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 
 type FAQItemProps = {
@@ -10,6 +12,7 @@ type FAQItemProps = {
 
 export function FAQItem({ question, answer }: FAQItemProps) {
   const [open, setOpen] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
 
   return (
     <article className="py-2">
@@ -23,27 +26,45 @@ export function FAQItem({ question, answer }: FAQItemProps) {
           {question}
         </span>
 
-        <ChevronDown
-          aria-hidden="true"
-          className={`h-5 w-5 shrink-0 text-[#6d1f32] transition duration-300 ${
-            open ? "rotate-180" : ""
-          }`}
-        />
+        <motion.span
+          animate={{ rotate: open && !shouldReduceMotion ? 180 : 0 }}
+          transition={{ duration: shouldReduceMotion ? 0 : 0.3 }}
+          className="flex shrink-0"
+        >
+          <ChevronDown
+            aria-hidden="true"
+            className="h-5 w-5 text-[#6d1f32]"
+          />
+        </motion.span>
       </button>
 
-      <div
-        className={`grid transition-all duration-300 ${
-          open
-            ? "grid-rows-[1fr] pb-6 opacity-100"
-            : "grid-rows-[0fr] opacity-0"
-        }`}
-      >
-        <div className="overflow-hidden">
-          <p className="max-w-3xl leading-8 text-[#666]">
-            {answer}
-          </p>
-        </div>
-      </div>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            key="answer"
+            initial={
+              shouldReduceMotion
+                ? { opacity: 1 }
+                : { opacity: 0, height: 0, y: -4 }
+            }
+            animate={{ opacity: 1, height: "auto", y: 0 }}
+            exit={
+              shouldReduceMotion
+                ? { opacity: 0 }
+                : { opacity: 0, height: 0, y: -4 }
+            }
+            transition={{
+              duration: shouldReduceMotion ? 0 : 0.28,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="overflow-hidden"
+          >
+            <p className="max-w-3xl pb-6 leading-8 text-[#666]">
+              {answer}
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </article>
   );
 }

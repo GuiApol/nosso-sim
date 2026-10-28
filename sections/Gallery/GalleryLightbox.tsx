@@ -1,15 +1,13 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+
 import Image from "next/image";
-import {
-  ChevronLeft,
-  ChevronRight,
-  X,
-} from "lucide-react";
+import {ChevronLeft, ChevronRight, X,} from "lucide-react";
 import { useEffect, useRef } from "react";
 
 import type { GalleryImage } from "./images";
+
 
 type GalleryLightboxProps = {
   images: GalleryImage[];
@@ -25,6 +23,8 @@ export function GalleryLightbox({
   onChange,
 }: GalleryLightboxProps) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  const shouldReduceMotion = useReducedMotion();
 
   const isOpen = selectedIndex !== null;
 
@@ -87,10 +87,19 @@ export function GalleryLightbox({
           role="dialog"
           aria-modal="true"
           aria-label="Visualização ampliada da galeria"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.25 }}
+          initial={{
+  opacity: shouldReduceMotion ? 1 : 0,
+  scale: shouldReduceMotion ? 1 : 0.985,
+}}
+animate={{ opacity: 1, scale: 1 }}
+exit={{
+  opacity: shouldReduceMotion ? 1 : 0,
+  scale: 1,
+}}
+transition={{
+  duration: shouldReduceMotion ? 0 : 0.3,
+  ease: [0.22, 1, 0.36, 1],
+}}
           onMouseDown={(event) => {
             if (event.currentTarget === event.target) {
               onClose();
@@ -117,25 +126,27 @@ export function GalleryLightbox({
             <ChevronLeft aria-hidden="true" className="h-7 w-7" />
           </button>
 
-          <motion.div
-            key={selectedIndex}
-            initial={{ opacity: 0, scale: 0.96, y: 12 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.98 }}
-            transition={{
-              duration: 0.35,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="relative h-[72vh] w-full max-w-6xl"
-          >
-            <Image
-  src={images[selectedIndex].src}
-  alt={images[selectedIndex].alt}
-  fill
-  sizes="(max-width: 768px) 100vw, 90vw"
-  className="object-contain"
-            />
-          </motion.div>
+          
+<motion.div
+  key={selectedIndex}
+  initial={{ opacity: 0, scale: 0.985 }}
+  animate={{ opacity: 1, scale: 1 }}
+  exit={{ opacity: 0, scale: 1.01 }}
+  transition={{
+    opacity: { duration: 0.3, ease: "easeOut" },
+    scale: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
+  }}
+  className="relative h-[72vh] w-full max-w-6xl"
+>
+  <Image
+    src={images[selectedIndex].src}
+    alt={images[selectedIndex].alt}
+    fill
+    sizes="(max-width: 768px) 100vw, 90vw"
+    className="object-contain"
+  />
+</motion.div>
+
 
           <button
             type="button"

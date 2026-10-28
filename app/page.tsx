@@ -9,6 +9,7 @@ import { Hero } from "@/sections/Hero";
 import { RSVP } from "@/sections/RSVP";
 import { Story } from "@/sections/Story";
 import { WeddingIntro } from "@/components/Intro";
+import { StickyRSVP } from "@/components/StickyRSVP";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <RSVP />
       <FAQ />
       <Footer />
+       <StickyRSVP />
     </main>
   );
 }

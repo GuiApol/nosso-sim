@@ -1,7 +1,8 @@
+
 "use client";
 
-import { Check, Copy, Heart, QrCode } from "lucide-react";
-import { useState } from "react";
+import { Check, Copy, Heart } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const PIX_KEY =
@@ -10,6 +11,15 @@ const PIX_KEY =
 export function PixCard() {
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState("");
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   async function copyPixKey() {
     setError("");
@@ -17,12 +27,18 @@ export function PixCard() {
     try {
       await navigator.clipboard.writeText(PIX_KEY);
 
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+
       setCopied(true);
 
-      window.setTimeout(() => {
+      timeoutRef.current = setTimeout(() => {
         setCopied(false);
+        timeoutRef.current = null;
       }, 2500);
     } catch {
+      setCopied(false);
       setError(
         "Não foi possível copiar o código. Tente selecioná-lo manualmente."
       );
@@ -32,23 +48,16 @@ export function PixCard() {
   return (
     <article className="overflow-hidden rounded-[2rem] border border-black/10 bg-white shadow-2xl shadow-black/10">
       <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-        {/* Lado esquerdo */}
         <div className="flex min-h-[360px] items-center justify-center bg-[#6d1f32] p-8 text-white sm:p-10">
           <div className="w-full text-center">
-            <div className="mx-auto flex aspect-square max-w-[230px] items-center justify-center rounded-[1.75rem] border border-white/20 bg-white p-6 shadow-xl shadow-black/10">
-              <div className="text-[#6d1f32]">
-                <Image
-  src="/images/pix/qr-code.png"
-  alt="QR Code PIX para presentear Guilherme e Raul"
-  width={220}
-  height={220}
-  className="mx-auto rounded-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl"
-/>
-
-<p className="mt-5 text-sm font-semibold">
-  Escaneie com o aplicativo do seu banco
-</p>
-              </div>
+            <div className="mx-auto flex aspect-square max-w-[230px] items-center justify-center rounded-[1.75rem] border border-white/20 bg-white p-3 shadow-xl shadow-black/10">
+              <Image
+                src="/images/pix/qr-code.png"
+                alt="QR Code PIX para presentear Guilherme e Raul"
+                width={220}
+                height={220}
+                className="mx-auto rounded-xl"
+              />
             </div>
 
             <p className="mx-auto mt-7 max-w-xs text-sm leading-7 text-white/75">
@@ -57,7 +66,6 @@ export function PixCard() {
           </div>
         </div>
 
-        {/* Lado direito */}
         <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#6d1f32]/10 text-[#6d1f32]">
             <Heart aria-hidden="true" className="h-5 w-5" />
@@ -104,24 +112,32 @@ export function PixCard() {
           <button
             type="button"
             onClick={copyPixKey}
-            className="mt-6 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-full bg-[#6d1f32] px-8 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#581827] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6d1f32]"
+            className="group mt-6 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-full bg-[#6d1f32] px-8 text-sm font-semibold text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#581827] hover:shadow-lg hover:shadow-[#6d1f32]/20 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6d1f32]"
           >
-            {copied ? (
-              <>
-                <Check className="h-5 w-5" />
-                Código copiado
-              </>
-            ) : (
-              <>
-                <Copy className="h-5 w-5" />
-                Copiar código PIX
-              </>
-            )}
+            <span
+              key={copied ? "success" : "copy"}
+              className="inline-flex items-center gap-3"
+            >
+              {copied ? (
+                <>
+                  <Check
+                    aria-hidden="true"
+                    className="h-5 w-5 animate-[pix-check-in_250ms_ease-out_both]"
+                  />
+                  Copiado!
+                </>
+              ) : (
+                <>
+                  <Copy aria-hidden="true" className="h-5 w-5" />
+                  Copiar código PIX
+                </>
+              )}
+            </span>
           </button>
 
           <div
             aria-live="polite"
-            className={`mt-5 text-center text-sm font-medium transition ${
+            className={`mt-5 text-center text-sm font-medium transition-all duration-300 ${
               copied
                 ? "translate-y-0 opacity-100 text-[#6d1f32]"
                 : "translate-y-1 opacity-0"
