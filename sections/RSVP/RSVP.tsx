@@ -20,14 +20,13 @@ export function RSVP() {
 
           <div className="mt-8 h-px w-20 bg-[#6d1f32]" />
 
-          <p className="mt-8 max-w-xl text-base leading-8 text-[#5f5f5f] sm:text-lg">
+             <p className="mt-8 max-w-xl text-base leading-8 text-[#5f5f5f] sm:text-lg">
             Para nos ajudar com a organização, confirme sua presença e informe
             se haverá acompanhantes.
           </p>
 
           <p className="mt-5 max-w-xl text-base leading-8 text-[#5f5f5f] sm:text-lg">
-            A confirmação poderá ser feita até a data que definirmos mais
-            adiante.
+            Pedimos que a confirmação seja realizada até 13 de dezembro de 2026.
           </p>
 
           <p className="mt-8 font-[var(--font-heading)] text-2xl italic text-[#6d1f32]">
