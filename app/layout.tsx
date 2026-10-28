@@ -26,7 +26,7 @@ const manrope = Manrope({
 
 const siteUrl = "https://nosso-sim-phi.vercel.app";
 
-const ogImage = "/images/og/nosso-sim-og.png";
+const ogImage = "/images/og/nosso-sim-og.jpg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
