@@ -18,8 +18,7 @@ export function Gallery() {
           </h2>
 
           <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-[#5f5f5f] sm:text-lg">
-            Em breve, este espaço receberá algumas das fotografias mais
-            especiais da nossa caminhada.
+           Alguns instantes do nosso amor, registrados à luz da manhã e guardados para sempre na memória.
           </p>
         </div>
 

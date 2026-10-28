@@ -8,7 +8,7 @@ export type GalleryImage = {
 
 export const galleryImages: GalleryImage[] = [
   {
-    src: "/images/otimizadas/DSC02470.webp",
+    src: "/images/otimizadas/DSC02504.webp",
     alt: "Guilherme e Raul deitados lado a lado sobre rochas na água rasa, com os olhos fechados enquanto pequenas ondas passam ao redor.",
     caption: "Pausas para descansar no abraço de quem a gente ama.",
     className: "md:col-span-2 md:row-span-2",
@@ -46,8 +46,8 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     src: "/images/otimizadas/DSC02281.webp",
-    alt: "Guilherme com o braço em volta de Raul enquanto os dois contemplam o pôr do sol e a silhueta dos edifícios.",
-    caption: "O entardecer tem outro brilho quando dividido.",
+    alt: "Guilherme com o braço em volta de Raul enquanto os dois contemplam o amanhecer e a silhueta dos edifícios.",
+    caption: "A luz da manhã ganha outro brilho quando estamos juntos.",
   },
   {
     src: "/images/otimizadas/DSC02265.webp",
@@ -81,12 +81,12 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     src: "/images/otimizadas/DSC02144.webp",
-    alt: "Guilherme e Raul com os olhos fechados e as testas encostadas, em um abraço sob a luz dourada do entardecer.",
+    alt: "Guilherme e Raul com os olhos fechados e as testas encostadas, em um abraço sob a luz dourada da manhã.",
     caption: "Onde o tempo desacelera e só existe o agora.",
   },
   {
     src: "/images/otimizadas/DSC02150.webp",
-    alt: "Guilherme e Raul em um retrato próximo, com os olhos fechados e os rostos juntos sob a luz suave do entardecer.",
+    alt: "Guilherme e Raul em um retrato próximo, com os olhos fechados e os rostos juntos sob a luz suave da manhã.",
     caption: "Onde o tempo desacelera e só existe o agora.",
   },
   {
@@ -176,7 +176,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     src: "/images/otimizadas/CA108168.webp",
-    alt: "Guilherme e Raul abraçados e trocando um beijo carinhoso ao ar livre sob a luz suave do entardecer.",
+    alt: "Guilherme e Raul abraçados e trocando um beijo carinhoso ao ar livre sob a luz suave da manhã.",
     caption: "Pausas no tempo que revelam o nosso melhor lado.",
   },
  {
