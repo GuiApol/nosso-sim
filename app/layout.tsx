@@ -1,3 +1,4 @@
+
 import type { Metadata, Viewport } from "next";
 import {
   Cormorant_Garamond,
@@ -23,9 +24,9 @@ const manrope = Manrope({
   variable: "--font-ui",
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://nosso-sim.vercel.app";
+const siteUrl = "https://nosso-sim-phi.vercel.app";
+
+const ogImage = "/images/og/nosso-sim-og.png";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -59,38 +60,37 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-  type: "website",
-  locale: "pt_BR",
-  url: "https://nosso-sim-phi.vercel.app/",
-  siteName: "Guilherme & Raul",
-  title: "Guilherme & Raul | Nosso Sim",
-  description:
-    "Celebre conosco o casamento de Guilherme e Raul, no dia 13 de janeiro de 2027, em Fortaleza, Ceará.",
-  images: [
-    {
-      url: "https://nosso-sim-phi.vercel.app/images/og/nosso-sim-og.png",
-      width: 1200,
-      height: 630,
-      alt: "Convite de casamento de Guilherme e Raul, 13 de janeiro de 2027",
-    },
-  ],
-},
-twitter: {
-  card: "summary_large_image",
-  title: "Guilherme & Raul | Nosso Sim",
-  description:
-    "Nosso casamento será em 13 de janeiro de 2027, em Fortaleza, Ceará.",
-  images: [
-    "https://nosso-sim-phi.vercel.app/images/og/nosso-sim-og.png",
-  ],
-},
+    type: "website",
+    locale: "pt_BR",
+    url: siteUrl,
+    siteName: "Guilherme & Raul",
+    title: "Guilherme & Raul | Nosso Sim",
+    description:
+      "Celebre conosco o casamento de Guilherme e Raul, no dia 13 de janeiro de 2027, em Fortaleza, Ceará.",
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Convite de casamento de Guilherme e Raul, 13 de janeiro de 2027",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Guilherme & Raul | Nosso Sim",
+    description:
+      "Nosso casamento será em 13 de janeiro de 2027, em Fortaleza, Ceará.",
+    images: [ogImage],
+  },
 
   robots: {
     index: true,
     follow: true,
   },
 
-icons: {
+  icons: {
     icon: "/images/logo/logo.png",
     shortcut: "/images/logo/logo.png",
     apple: "/images/logo/logo.png",
